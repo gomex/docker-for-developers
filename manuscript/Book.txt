@@ -5,6 +5,7 @@ introduction.md
 why.md
 whatis.md
 introduction.md
+setup.md
 command.md
 creatingimages.md
 storage.md
