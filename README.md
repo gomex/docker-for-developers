@@ -12,3 +12,6 @@ This book introduces you to Docker's use of best practice practices.
 1. [Why using Docker?](manuscript/why.md)
 1. [What is Docker](manuscript/whatis.md)
 1. [Set up](manuscript/setup.md)
+1. [Commands](manuscript/command.md)
+1. [Creating images](manuscript/creatingimages.md)
+1. [Storage](manuscript/storage.md)
