@@ -2,9 +2,9 @@ preface.md
 organization.md
 acknowledgements.md
 introduction.md
-#why.md
-#whatis.md
-#setup.md
-#commands.md
-#creatingimages.md
-#storage.md
+why.md
+whatis.md
+setup.md
+commands.md
+creatingimages.md
+storage.md
