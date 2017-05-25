@@ -8,3 +8,13 @@ setup.md
 commands.md
 creatingimages.md
 storage.md
+network.md
+machine.md
+compose.md
+macos_and_windows.md
+dockerizing_app.md
+codebase.md
+dependencies.md
+config.md
+backingservices.md
+build-release-run.md
