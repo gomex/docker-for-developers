@@ -1,6 +1,6 @@
 # Build, release, run
 
-The next item of the list of [12factor](http://12factor.net/pt_br/) model, “Build, launch, run”, is the fifth best practice.
+The next item of the list of [12factor](http://12factor.net) model, “Build, launch, run”, is the fifth best practice.
 
 In the process of automating the software deployment infrastructure, we need to be careful so the process behavior is within the expectations and so human errors have low impact in the whole development process, from release to production.
 
@@ -50,7 +50,7 @@ Sending the image to the repository is an important part of this best practice, 
 
 In the proposed model, the image in the central repository is available to be downloaded in the server. In case you are using a pipeline tool, it’s important to use the product variables (instead of using the date) to uniquely identify the artifact, and guarantee that the image that is going to be used in the Run stage is the same built in the Release stage. Exemple on GoCD: the variables **GO_PIPELINE_NAME** and **GO_PIPELINE_COUNTER** can be used together to identify the artifact.
 
-With the image creation, we can guarantee that the **Build** stage was fulfilled perfectly, because now we have an artifact built and ready to SER REUNIDO À CONFIGURAÇÃO.
+With the image creation, we can guarantee that the **Build** stage was fulfilled perfectly, because now we have an artifact built and ready to be put together with the configuration.
 
 Com a geração da imagem podemos garantir que a etapa **Construir** foi atendida perfeitamente, pois, agora temos um artefato construído e pronto para ser reunido à configuração.
 

@@ -18,3 +18,10 @@ dependencies.md
 config.md
 backingservices.md
 build-release-run.md
+processes.md
+portbinding.md
+concurrency.md
+disposability.md
+parity.md
+logs.md
+useful_commands.md
