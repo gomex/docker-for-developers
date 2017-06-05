@@ -24,4 +24,9 @@ concurrency.md
 disposability.md
 parity.md
 logs.md
+admin.md
+tips.md
+apendice.md
+container_vm.md
 useful_commands.md
+gui_applications.md
