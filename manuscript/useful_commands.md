@@ -12,3 +12,11 @@ Here are some useful, simple commands:
 `docker volume prune`
 -   Shows use of containers resources running  
 `docker stats $(docker ps --format {{.Names}})`
+-   List all stopped containers
+`docker ps -f "status=exited"`
+-   Access a terminal on the container  
+`docker exec -it container bash`
+-   Save an image  
+`docker save -o imagem.docker imagem`
+-   Load an image
+`docker load -i imagem.docker`

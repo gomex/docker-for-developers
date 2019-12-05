@@ -1,0 +1,27 @@
+{
+  "title": "Docker for Developers",
+  "language": "en",
+  "author": "Rafael Gomes",
+  "root": "./manuscript",
+  "structure": {
+    "readme": "organization.md",
+    "glossary": "glossary.md",
+    "summary": "summary.md"
+  },
+  "plugins": [
+    "disqus",
+    "ga",
+    "github"
+  ],
+  "pluginsConfig": {
+    "disqus": {
+      "shortName": ""
+    },
+    "ga": {
+      "token": ""
+    },
+    "github": {
+      "url": "https://github.com/gomex/docker-for-developers"
+    }
+  }
+}
