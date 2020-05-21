@@ -43,7 +43,7 @@ With this approach *docker hub* will not execute the build of the image on every
 
 1. ![auto builds](images/lintdocker1.png)
 2. ![triggers](images/lintdocker2.png)
-3. Exemplo de circle.yml
+3. Example of circle.yml
 
 ```
 machine:
@@ -65,7 +65,7 @@ deployment:
 
 1. ![auto builds](images/lintdocker1.png)
 2. ![triggers](images/lintdocker2.png)
-3. Exemplo de .travis.yml
+3. Example of .travis.yml
 
 ```
 sudo: required

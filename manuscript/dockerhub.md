@@ -6,7 +6,9 @@ You are learning to do pretty cool stuff, building your image, what about sharin
 
 Dockerhub is a shared repository of Docker images. In the previous chapter, you read a little about official images and not-official, is on Dockerhub that the **Dockerfiles** are distributed for the community with the object to facilitate the build of your docker environment.
 
-Several companies make their official product available as docker images, as:
+Docker, Inc. sponsors a dedicated team that is responsible for reviewing and publishing all content in the [Official Images](https://docs.docker.com/docker-hub/official_images/).This team works in collaboration with upstream software maintainers, security experts, and the broader Docker community.
+
+Here some examples of Official Images, mantained by the Docker team:
 
 + [MySQL](https://hub.docker.com/_/mysql/)
 + [Nginx](https://hub.docker.com/_/nginx/)
