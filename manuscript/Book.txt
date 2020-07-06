@@ -30,3 +30,5 @@ appendix.md
 container_vm.md
 useful_commands.md
 gui_applications.md
+linting_dockerfile.md
+dockerhub.md
