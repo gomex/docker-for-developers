@@ -4,7 +4,7 @@ We are continually evolving to deliver ever better applications, in less time, r
 
 Currently, we observe the rising of several platforms to facilitate the deployment, configuration and scalability of the applications we develop. However, to increase our maturity level we can not just depend on the platform, we need to build our application following the best practices. 
 
-Aiming to define a series of best practices common to modern web applications, some developers from [Heroku](https://www.heroku.com/) wrote the [12Factor app](http://12factor.net/pt_br/) manifesto, counting on a wide experience in developing web applications.  
+Aiming to define a series of best practices common to modern web applications, some developers from [Heroku](https://www.heroku.com/) wrote the [12Factor app](https://12factor.net) manifesto, counting on a wide experience in developing web applications.  
 
 ![](images/12factor.gif)
 

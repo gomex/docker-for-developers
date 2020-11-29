@@ -1,6 +1,6 @@
 # Processes
 
-Next in the list of [12factor](http://12factor.net) model, we present **”Processes”** as the sixth best practice. 
+Next in the list of [12factor](https://12factor.net) model, we present **”Processes”** as the sixth best practice. 
 
 Nowadays, with the automated processes and the due intelligence in maintaining applications, it is expected that the application can respond to demand peaks with automatic initialization of new processes without affecting its behavior.
 

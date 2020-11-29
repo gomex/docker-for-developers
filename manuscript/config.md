@@ -1,6 +1,6 @@
 # Config
 
-Moving on on the list of [12factor](http://12factor.net/) model, **“Config”** is the third best practice.
+Moving on on the list of [12factor](https://12factor.net/) model, **“Config”** is the third best practice.
 
 When we are creating a software, we apply a given behavior inside the code and usually it’s not parameterizable. For the application behave differently, it will be necessary to change part of the code.
 

@@ -25,6 +25,8 @@ wget -qO- https://get.docker.com/ | sh
 ```
 We advise you to read the script that’s being executed in your operational system. Access this [link](https://get.docker.com/) and analyse the code when you have the time.
 
+> **WARNING**: The utilization of this convenience script is not recommended for production environments. This script does the verification of the operational system and dependencies as well as installing packages standard version packages. For environment production environments, follow the official instructions on the [Official Documentation](https://docs.docker.com/get-docker/)
+
 This procedure takes a little while. After finishing the test, execute the following command:
 
 ```
@@ -41,7 +43,7 @@ wget -qO- https://get.docker.com/gpg | sudo apt-key add -
 
 ### Setting up Docker compose with pip
 
-[Pip](https://en.wikipedia.org/wiki/Pip_(package_manager) is a Python package manager and, as Docker Compose is written on this language, it is possible to set it up as it follows:
+[Pip](https://en.wikipedia.org/wiki/Pip_(package_manager)) is a Python package manager and, as Docker Compose is written on this language, it is possible to set it up as it follows:
 
 ```
 pip install docker-compose
@@ -114,7 +116,7 @@ The installation of tools of the Docker ecosystem on Windows can be made through
 It is important to highlight that it is necessary to enable the virtualization support. On Windows 8, it is possible to check it using the **Task Manager**. At the **Performance** tab, click on **CPU** to visualize the following window:
 ![](images/windows1.png)
 
-To check the virtualization support on Windows 7, use this [link](http://www.microsoft.com/en-us/download/details.aspx?id=592) to further information.
+To check the virtualization support on Windows 7, use this [link](https://www.microsoft.com/en-us/download/details.aspx?id=592) to further information.
 
 ### Setting up Docker Toolbox
 

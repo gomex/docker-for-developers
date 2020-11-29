@@ -1,6 +1,6 @@
 # Development/production parity
 
-Next on the [12factor](http://12factor.net) model list, we have **“Development/production parity”** as the tenth best practice. 
+Next on the [12factor](https://12factor.net) model list, we have **“Development/production parity”** as the tenth best practice. 
 
 ![](images/paridade1.png)
 

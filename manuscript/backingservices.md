@@ -1,6 +1,6 @@
 # Backing services
 
-Moving on on the list of [12factor](http://12factor.net/pt_br) model, we find **”Backing services”** as the fourth best practice.
+Moving on on the list of [12factor](https://12factor.net) model, we find **”Backing services”** as the fourth best practice.
 
 To bring some context, “support service” is any application your code consumes in order to function correctly (ex.: database, message service etc.).
 

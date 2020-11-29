@@ -1,6 +1,6 @@
 # Port binding
 
-According to the list of the [12factor](http://12factor.net) model, the seventh best practice is **port binding**. 
+According to the list of the [12factor](https://12factor.net) model, the seventh best practice is **port binding**. 
 
 It’s usual to find applications executed inside containers of web servers, such as Tomcat or Jboss, for instance. Usually, these applications are deployed into the services so they can be access by user externally.
 
