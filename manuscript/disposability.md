@@ -1,6 +1,6 @@
 # Disposability
 
-In the ninth position of the list of the [12factor](http://12factor.net) model, we have **“Disposability”**.
+In the ninth position of the list of the [12factor](https://12factor.net) model, we have **“Disposability”**.
 
 When we talk about web applications, the expectancy is that more than one process attends to the whole traffic required to the service. However, as important as the capacity of starting new processes is the ability of a defective process ending up in the same velocity that started, for a process that takes too long to finish can compromise the whole solution, once it can still be responding to requirements defectively.
 

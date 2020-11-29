@@ -4,7 +4,7 @@
 Before we explain how to create your image, it’s important to bring up a question that usually confuses Docker beginners: “Image or container?”
 ### What’s the difference between Image and Container?
 
-Making a parallel with the concept of [object orientation](https://pt.wikipedia.org/wiki/Orienta%C3%A7%C3%A3o_a_objetos), **image** is the class and **container** is the object. The image is the infrastructure abstraction with reading only status, from where the container is going to be instantiated. 
+Making a parallel with the concept of [object orientation](https://en.wikipedia.org/wiki/Object-oriented_programming), **image** is the class and **container** is the object. The image is the infrastructure abstraction with reading only status, from where the container is going to be instantiated. 
 Every container is created from an image; thus we can conclude that we will never have an image running. A container can only be created from a single image. In case you require a different behavior, it will be necessary to customize the image. 
 
 ### Anatomy of an image
@@ -20,7 +20,7 @@ The official Docker images are those with no users in their names. The image **�
 
 **Name of the image**
 
-The name of an official image is formed by two parts. The first one is called **“repository”** according to the [documentation](https://docs.docker.com/engine/userguide/containers/dockerimages/), and the second one is called **“tag”**. In the example of image **“ubuntu:14.04”**, **ubuntu** is the repository and **14.04** is the tag. For Docker, the **“repository”** is an abstraction of the image set. Don’t mistake it by the image storage, that we will approach later. The **“tag”** is an abstraction to create unity inside the image set determined in the **“repository”**. 
+The name of an official image is formed by two parts. The first one is called **“repository”** according to the [documentation](https://docs.docker.com/get-started), and the second one is called **“tag”**. In the example of image **“ubuntu:14.04”**, **ubuntu** is the repository and **14.04** is the tag. For Docker, the **“repository”** is an abstraction of the image set. Don’t mistake it by the image storage, that we will approach later. The **“tag”** is an abstraction to create unity inside the image set determined in the **“repository”**. 
 A **“repository”** can contain more than one **“tag”** and each set repository:tag represents a different image. 
 
 Execute the [command](https://docs.docker.com/engine/reference/commandline/images/) below to visualize all images that are found locally in your station at this exact moment:

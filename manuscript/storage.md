@@ -1,6 +1,6 @@
 # Understanding storage on Docker
 
-To understand how Docker manages its volumes, first we need to explain how does it work at least a Docker storage [backend](http://searchdatacenter.techtarget.com/definition/back-end). We will do this here with the AUFS, that was the first one and still is the standard in a good part of Docker installations. 
+To understand how Docker manages its volumes, first we need to explain how does it work at least a Docker storage [backend](https://searchdatacenter.techtarget.com/definition/back-end). We will do this here with the AUFS, that was the first one and still is the standard in a good part of Docker installations. 
 ![](images/aufs_layers.jpg)
 
 ### How does it work a Docker backend (ex.: AUFS)

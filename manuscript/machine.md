@@ -109,7 +109,7 @@ Known troubleshooting: in case you’re using Docker machine on MacOS and for so
 
 #### Cloud
 
-For this example we will use the most common cloud driver, [AWS](http://aws.amazon.com/). For such, we need an AWS account to [this driver](https://docs.docker.com/machine/drivers/aws/) works properly.
+For this example we will use the most common cloud driver, [AWS](https://aws.amazon.com/). For such, we need an AWS account to [this driver](https://docs.docker.com/machine/drivers/aws/) works properly.
 
 It is required that your credentials are in the file ~/.aws/credentials as it follows:
 
@@ -125,7 +125,7 @@ In case you don’t want to put these information on file, you can specify them 
 export AWS_ACCESS_KEY_ID=AKID1234567890
 export AWS_SECRET_ACCESS_KEY=MY-SECRET-KEY
 ```
-You can find more information on AWS credentials in [this article](http://blogs.aws.amazon.com/security/post/Tx3D6U6WSFGOK2H/A-New-and-Standardized-Way-to-Manage-Credentials-in-the-AWS-SDKs).
+You can find more information on AWS credentials in [this article](https://blogs.aws.amazon.com/security/post/Tx3D6U6WSFGOK2H/A-New-and-Standardized-Way-to-Manage-Credentials-in-the-AWS-SDKs).
 
 When we create an environment using the command **docker-machine create**, is is translated into AWS in the creation of a [EC2 instance](https://aws.amazon.com/ec2/) and then it is automatically installed in every required software in the new environment.
 

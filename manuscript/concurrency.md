@@ -1,6 +1,6 @@
 # Concurrency
 
-The eighth best practice from the list of [12factor](http://12factor.net) model is **“Concurrency”**.
+The eighth best practice from the list of [12factor](https://12factor.net) model is **“Concurrency”**.
 
 During the process of developing an application it’s hard to imagine the amount of requirements it will have when in production. On the other hand, a service that bears great usage volumes is expected in modern solutions. Nothing is more frustrating than requiring access to an application and it is not available. It suggests lack of care and professionalism in most cases.
 
@@ -93,7 +93,7 @@ http {
 }
 ```
 
-In the configuration file above, some innovations were introduced. The first one, **“resolv 127.0.0.11“**, is the Docker’s internal DNS service. By using this approach, it’s possible to balance the load via name, using Docker’s internal resource. For more details on Docker’s internal DNS, check out this documentation ([https://docs.docker.com/engine/userguide/networking/configure-dns/](https://docs.docker.com/engine/userguide/networking/configure-dns/)) (only in English).
+In the configuration file above, some innovations were introduced. The first one, **“resolv 127.0.0.11“**, is the Docker’s internal DNS service. By using this approach, it’s possible to balance the load via name, using Docker’s internal resource. For more details on Docker’s internal DNS, check out this documentation ([https://docs.docker.com/config/containers/container-networking/](https://docs.docker.com/config/containers/container-networking/) (only in English).
 
 The second innovation, the set **$alias “apps”** function, is responsible for specifying the name **“apps”** used to configure the reverse proxy, then **“proxy_pass http://$alias;”**. It’s important to emphasize that **“apps”** is the name of the network specified inside the file **docker-compose.yml**. In this case, the balancing is made for the network, and every new container that enters this network is automatically added to the load balancing.
 

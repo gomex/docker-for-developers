@@ -11,7 +11,7 @@ To create a container is necessary to know from each image it will be executed. 
 docker image list
 ```
 
-The images that appear are on your **Docker host** and do not require any download from the [Docker public cloud](hub.docker.com) unless you wish to update it. To update the image, just execute the command below:
+The images that appear are on your **Docker host** and do not require any download from the [Docker public cloud](https://hub.docker.com) unless you wish to update it. To update the image, just execute the command below:
 ```
 docker image pull python
 ```
@@ -125,7 +125,7 @@ The most used parameters in running a container are:
 
 ## Managing containers
 
-Once the container is created from an image, it is possible to manage the usage with new commands. In case you wish to turn off the container, just use the command [docker stop](https://docs.docker.com/engine/reference/commandline/stop/). It gets as an argument the container **ID** or **name**. Both data can be obtained through **docker ps**, explained in the previous topic. 
+Once the container is created from an image, it is possible to manage the usage with new commands. In case you wish to turn off the container, just use the command [docker stop](https://docs.docker.com/engine/reference/commandline/stop/). It gets as an argument the container **ID** or **name**. Both data can be obtained through **docker container ps**, explained in the previous topic. 
 
 An example:
 

@@ -1,6 +1,6 @@
 # Are you linting your Docker file? You should...
 
-So you wrote the Dockerfile following the [Best Practices](https://docs.docker.com/engine/userguide/eng-image/dockerfile_best-practices/) and everything, and now is just enjoy it, right? What about linting your Dockerfile?
+So you wrote the Dockerfile following the [Best Practices](https://docs.docker.com/develop/develop-images/dockerfile_best-practices/) and everything, and now is just enjoy it, right? What about linting your Dockerfile?
 
 ## How can I do that?
 It will depend on the image build process if it's automated or manually done.
