@@ -84,14 +84,11 @@ In order to restores this backup, use:
 docker container run --rm -v /tmp:/backup --volumes-from nginx-teste busybox tar -xvf /backup/backup.tar /usr/share/nginx/html
 ```
 
-More information can be found in the [answer](http://stackoverflow.com/a/34776997/1046584), where is possible to find some  *aliases* for these two commands. These  *aliases* are also available below, in the *Aliases* section.
+More information can be found in the [answer](https://stackoverflow.com/a/34776997/1046584), where is possible to find some  *aliases* for these two commands. These  *aliases* are also available below, in the *Aliases* section.
 
 Some other sources:
 
- * Docker official documentation about [Data backup, restoration or migration](https://docs.docker.com/engine/userguide/containers/dockervolumes/#backup-restore-or-migrate-data-volumes)
-
- * A backup tool (currently deprecated): [docker-infra/docker-backup](https://github.com/docker-infra/docker-backup)
-
+ * Docker official documentation about [Data backup, restoration or migration](https://docs.docker.com/storage/volumes/#backup-restore-or-migrate-data-volumes)
 
 ### Use docker container exec to “enter a container”
 
@@ -123,7 +120,7 @@ With this command you will remove:
 * All the networks not in use by at least one container
 * Every *dangling* images
 
-Obs.: Let’s not get too deep in Docker’s low level concept and say that *dangling* images are simply images with no tags, therefore unnecessary for conventional use.
+PS.: Let’s not get too deep in Docker’s low level concept and say that *dangling* images are simply images with no tags, therefore unnecessary for conventional use.
 
 Depending on the type of application, logs can occupy some volume too. The management depends a lot on which [driver](https://docs.docker.com/engine/admin/logging/overview/) is used. In the standard driver (‘json-file’), the cleaning can be done by executing the following command inside **Docker Host**:
 
@@ -205,16 +202,15 @@ function docker-volume-restore() {
 Sources:
 
 - [https://zwischenzugs.wordpress.com/2015/06/14/my-favourite-docker-tip/](https://zwischenzugs.wordpress.com/2015/06/14/my-favourite-docker-tip/)
-- [https://website-humblec.rhcloud.com/docker-tips-and-tricks/](https://website-humblec.rhcloud.com/docker-tips-and-tricks/)
+- [http://blog.labianchin.me/2016/02/15/docker-tips-and-tricks](http://blog.labianchin.me/2016/02/15/docker-tips-and-tricks)
 
 ## Best practices to build images
 
 On Docker, images are traditionally built using a ‘Dockerfile’. There are some good guides on the best practices to build Docker images. Take a look at our recommendations:
 
-- [Documentação oficial](https://docs.docker.com/engine/articles/dockerfile_best-practices/)
-- [Guia do projeto Atomic](http://www.projectatomic.io/docs/docker-image-author-guidance/)
-- [Melhores práticas do Michael Crosby Parte 1](http://crosbymichael.com/dockerfile-best-practices.html)
-- [Melhores práticas do Michael Crosby Parte 2](http://crosbymichael.com/dockerfile-best-practices.html)
+- [Official Documentation](https://docs.docker.com/engine/articles/dockerfile_best-practices/)
+- [Guide Project Atomic](https://www.projectatomic.io/docs/docker-image-author-guidance/)
+- [Best practices from Michael Crosby](https://www.devopsschool.com/tutorial/docker/dockerfile/dockerfile-best-practices.html)
 
 ### Use a "linter"
 
@@ -222,7 +218,7 @@ On Docker, images are traditionally built using a ‘Dockerfile’. There are so
 
 Many options were discussed [here](https://stackoverflow.com/questions/28182047/is-there-a-way-to-lint-the-dockerfile).
 
-Since January 2016, the most complete “linter” seems to be [hadolint](http://hadolint.lukasmartinelli.ch/), available in two versions: on-line and terminal. The interest thing abou this tool is that it uses the mature [Shell Check](http://www.shellcheck.net/about.html) to validate the shell commands.
+Since January 2016, the most complete “linter” seems to be [hadolint](https://github.com/hadolint/hadolint), available in two versions: on-line and terminal. The interest thing abou this tool is that it uses the mature [Shell Check](http://www.shellcheck.net/about.html) to validate the shell commands.
 
 ### The basics
 
@@ -241,7 +237,7 @@ In most cases, run only one process per container. Decoupling applications in se
 
 The ‘ADD’ command exists since the beginning of Docker. It’s versatile, and provides some tricks aside of simply copying files from the building context, and that’s what makes it magical and hard to understand. It allows to download url files and automatically extract files of known formats (tar, gzip, bzip2, etc.).
 
-On the other hand ‘COPY’ is a simpler command to put files and folders of the building path inside the Docker image. Thus, choose ‘COPY’ unless you are absolutely sure that ‘ADD’ is necessary. For more details, check [here](https://labs.ctl.io/dockerfile-add-vs-copy/).
+On the other hand ‘COPY’ is a simpler command to put files and folders of the building path inside the Docker image. Thus, choose ‘COPY’ unless you are absolutely sure that ‘ADD’ is necessary. For more details, check [here](https://www.linuxteacher.com/docker-add-vs-copy-vs-volume/).
 
 ### Run a “checksum” after downloading and before using the file
 
@@ -263,11 +259,11 @@ Whenever possible, use official images as a base for your image. You can use the
 
 If more tools and dependencies are required, look for images like [‘buildpack-deps’](https://hub.docker.com/_/buildpack-deps/).
 
-However, in case ‘debian’ is still too big, there are minimalist images such as [‘alpine’](https://hub.docker.com/r/gliderlabs/alpine/) or even [‘busybox’](https://hub.docker.com/r/gliderlabs/alpine/). Avoid ‘alpine’ if DNS is required, for there are a [few issues to be solved](https://github.com/gliderlabs/docker-alpine/blob/master/docs/caveats.md). In addition, avoid it for languages that use GCC, such as Ruby, Node, Python, etc.; because ‘alpine’ uses libc MUSL that can produce different binaries.
+However, in case ‘debian’ is still too big, there are minimalist images such as [‘alpine’](https://hub.docker.com/r/gliderlabs/alpine/) or even [‘busybox’](https://hub.docker.com/_/busybox). Avoid ‘alpine’ if DNS is required, for there are a [few issues to be solved](https://github.com/gliderlabs/docker-alpine/blob/master/docs/caveats.md). In addition, avoid it for languages that use GCC, such as Ruby, Node, Python, etc.; because ‘alpine’ uses libc MUSL that can produce different binaries.
 
 Avoid gigantic images such as [‘phusion/baseimage’](https://hub.docker.com/r/phusion/baseimage/). This image is too big, it defeats the philosophy of process per container  and much of what makes it up is not essential for Docker containers; [read more here](https://blog.docker.com/2014/06/why-you-dont-need-to-run-sshd-in-docker/) .
 
-[Other sources](http://www.iron.io/microcontainers-tiny-portable-containers/)
+[Other sources](https://www.iron.io/microcontainers-tiny-portable-containers/)
 
 ### Use the layer building cache
 
@@ -281,7 +277,7 @@ RUN npm install
 COPY . /app
 ```
 
-To read more on this subject, check out this [link](http://bitjudo.com/blog/2014/03/13/building-efficient-dockerfiles-node-dot-js/).
+To read more on this subject, check out this [link](https://bitjudo.com/blog/2014/03/13/building-efficient-dockerfiles-node-dot-js/).
 
 ### Clean on the same layer
 
@@ -301,7 +297,7 @@ Note that, according to the [documentation](https://github.com/docker/docker/blo
 
 Avoid to run ‘apt-get upgrade’ or ‘dist-upgrade’, badales several packages of the base image are not going to update inside a container with no privileges. If there’s a specific package to update, just use ‘apt-get install -y foo’ to automatically update it.
 
-To read more on this subject, check out the [link](http://blog.replicated.com/2016/02/05/refactoring-a-dockerfile-for-image-size/) and [this one](https://docs.docker.com/engine/userguide/eng-image/dockerfile_best-practices/#apt-get).
+To read more on this subject, check out the [link](https://www.replicated.com/blog/refactoring-a-dockerfile-for-image-size/) and [this one](https://docs.docker.com/develop/develop-images/dockerfile_best-practices/).
 
 ### Use a “wrapper” script as ENTRYPOINT, sometimes
 
@@ -335,13 +331,13 @@ exec "/app"
 
 Note: **always** use ‘exec’ in shell scripts regarding the application. Therefore, the application can get Unix signals.
 
-Also, consider using a simple initialization system (e.g. [dumb init](https://github.com/Yelp/dumb-init)), such as ‘CMD’ base, so the Unix signal can be duly treated. Read more [here](http://engineeringblog.yelp.com/2016/01/dumb-init-an-init-for-docker.html).
+Also, consider using a simple initialization system (e.g. [dumb init](https://github.com/Yelp/dumb-init)), such as ‘CMD’ base, so the Unix signal can be duly treated. Read more [here](https://engineeringblog.yelp.com/2016/01/dumb-init-an-init-for-docker.html).
 
 #### Log for stdout
 
 Applications inside Docker should emit logs for ‘stdout’. However, some applications write logs in files. In these cases, the solution is to create a file *symlink* for ‘stdout’.
 
-Example: Dockerfile of [nginx](https://github.com/nginxinc/docker-nginx/blob/master/Dockerfile):
+Example: Dockerfile of [nginx](https://github.com/nginxinc/docker-nginx):
 
 ~~~
 # forward request and error logs to docker log collector

@@ -1,6 +1,6 @@
 # Admin processes
 
-The twelfth and last best practice from the [12factor](http://12factor.net) model list: **“Admin processes”**.
+The twelfth and last best practice from the [12factor](https://12factor.net) model list: **“Admin processes”**.
 
 ![](images/admin1.png)
 

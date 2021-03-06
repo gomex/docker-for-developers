@@ -55,9 +55,9 @@ This network aims to isolate the container regarding external communications. Th
 
 This network, usually, is used for containers that only manipulate files, with no need of sending them to another place using the network (Ex.: backup container uses the volumes of the database container to do the dump and will be used in the data retention process. 
 
-![Exemplo de uso da rede none](images/rede_none.png)
+![Example of none network](images/rede_none.png)
 
-If you have any questions on using volumes on Docker, check out [this article](http://techfree.com.br/2015/12/entendendo-armazenamentos-de-dados-no-docker/) and see more on Docker storage.
+If you have any questions on using volumes on Docker, check out [this article](https://imasters.com.br/devsecops/entendendo-o-armazenamento-de-dados-docker) and see more on Docker storage.
 
 #### Host
 
@@ -101,15 +101,15 @@ Now, we create a container at the isolated_nw network:
 docker container run -itd --net isolated_nw alpine sh
 ```
 
-![Rede isolada](images/bridge_network.png)
+![Isolated network](images/bridge_network.png)
 
 It’s important to emphasize: a container that is in a given network doesn’t access another container that is in another network. Even if you know the destination IP. For one container to access another in another network, it’s necessary that the origin is present in both network that you wish to reach. 
 
 The containers in the isolated_nw network can expose their ports on Docker host and these ports can be accessed both by containers outside the network - the isolated_nw - and external machines with access to Docker host. 
 
-![Rede isolada publicando portas](images/network_access.png)
+![Isolated network published port](images/network_access.png)
 
-Para descobrir quais containers estão associados a uma determinada rede, execute o comando abaixo:
+To find the container associated with a given network, use the below command:
 
 ```
 docker network inspect isolated_nw

@@ -1,6 +1,6 @@
 # Build, release, run
 
-The next item of the list of [12factor](http://12factor.net) model, “Build, launch, run”, is the fifth best practice.
+The next item of the list of [12factor](https://12factor.net) model, “Build, launch, run”, is the fifth best practice.
 
 In the process of automating the software deployment infrastructure, we need to be careful so the process behavior is within the expectations and so human errors have low impact in the whole development process, from release to production.
 
@@ -42,7 +42,7 @@ docker push ${USER}/app:${TIMESTAMP}
 docker push ${USER}/app:latest
 ```
 
-Aside of building the image, it sends it to the Docker’s image [repository](http://hub.docker.com/).
+Aside of building the image, it sends it to the Docker’s image [repository](https://hub.docker.com/).
 
 Remember: this code and others from the best practice are in the [repository](https://github.com/gomex/exemplo-12factor-docker), in the folder **“factor5“**.
 
