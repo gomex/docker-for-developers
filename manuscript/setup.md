@@ -116,7 +116,7 @@ The installation of tools of the Docker ecosystem on Windows can be made through
 It is important to highlight that it is necessary to enable the virtualization support. On Windows 8, it is possible to check it using the **Task Manager**. At the **Performance** tab, click on **CPU** to visualize the following window:
 ![](images/windows1.png)
 
-To check the virtualization support on Windows 7, use this [link](https://www.microsoft.com/en-us/download/details.aspx?id=592) to further information.
+To check the virtualization support on Windows 7, use this [link](https://web.archive.org/web/20210115191932/https://www.microsoft.com/en-us/download/details.aspx?id=592) to further information.
 
 ### Setting up Docker Toolbox
 
